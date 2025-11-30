@@ -21,6 +21,10 @@ const langs = {
     ru: 'Сбросить',
     en: 'Reset',
   },
+  'your-passwords-title': {
+    ru: 'Ваши Пароли:',
+    en: 'Your Passwords:',
+  },
 };
 
 const titles = {

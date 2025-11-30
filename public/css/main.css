@@ -120,6 +120,7 @@
 }
 
 .password-generator__passwords-title {
+  text-transform: capitalize;
   display: none;
 }
 
