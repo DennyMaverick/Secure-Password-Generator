@@ -1,0 +1,24 @@
+@use '../vars';
+
+.lang-tool {
+  padding: 5px 7px;
+  font-weight: 600;
+  font-size: 14px;
+  width: 65px;
+  height: 25px;
+  border-radius: 4px;
+  background-color: vars.$color-indian-red;
+  &__item {
+    cursor: pointer;
+    &:hover {
+      opacity:.8;
+    }
+    &--active {
+      color: vars.$black;
+    }
+  }
+  &__devider {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+}
