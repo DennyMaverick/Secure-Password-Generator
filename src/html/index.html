@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -38,18 +38,39 @@
     />
     <!-- <link rel="stylesheet" href="./css/libs/libs.min.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
+    <!--* main script  -->
+    <script defer src="./js/main.js"></script>
   </head>
-  <body>
+  <body class="body">
     <main>
       <section class="password-generator">
         <div class="password-generator__inner">
-          <div class="password-generator__lang-tool lang-tool">
-            <span class="lang-tool__item" data-lang="ru">RU</span>
-            <span class="lang-tool__devider">|</span>
-            <span class="lang-tool__item" data-lang="en">EN</span>
+          <div class="password-generator__tools">
+            <label class="theme-switch">
+              <input checked type="checkbox" id="theme-toggle" />
+
+              <span class="theme-switch__track">
+                <span class="theme-switch__icon theme-switch__icon--moon">
+                  ☾
+                </span>
+
+                <span class="theme-switch__icon theme-switch__icon--sun">
+                  ☀
+                </span>
+              </span>
+            </label>
+            <div class="password-generator__lang-tool lang-tool">
+              <span class="lang-tool__item" data-lang="ru">RU</span>
+              <span class="lang-tool__devider">|</span>
+              <span class="lang-tool__item" data-lang="en">EN</span>
+            </div>
           </div>
           <div class="container">
-            <h1 class="password-generator__title lang-password-generator__title">Генератор паролей</h1>
+            <h1
+              class="password-generator__title lang-password-generator__title"
+            >
+              Генератор паролей
+            </h1>
             <div class="password-generator__input input">
               <div class="password-generator__items">
                 <div class="input__item password-item">
@@ -60,13 +81,22 @@
                   </h2>
                   <ul class="password-item__list">
                     <li class="password-item__list-item" data-char="eight">
-                      8 <span class="lang-password-generator-symbols">символов</span>
+                      8
+                      <span class="lang-password-generator-symbols">
+                        символов
+                      </span>
                     </li>
                     <li class="password-item__list-item" data-char="twelve">
-                      12 <span class="lang-password-generator-symbols">символов</span>
+                      12
+                      <span class="lang-password-generator-symbols">
+                        символов
+                      </span>
                     </li>
                     <li class="password-item__list-item" data-char="fifteen">
-                      15 <span class="lang-password-generator-symbols">символов</span>
+                      15
+                      <span class="lang-password-generator-symbols">
+                        символов
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -75,7 +105,9 @@
                     class="password-item__label password-item__label-special"
                     for="special"
                   >
-                    <h2 class="password-item__title lang-special-symbols">специальные символы</h2>
+                    <h2 class="password-item__title lang-special-symbols">
+                      специальные символы
+                    </h2>
                   </label>
                   <input
                     class="password-item__default-checkbox password-item__default-checkbox--specials"
@@ -94,7 +126,9 @@
                 </div> -->
               </div>
               <div class="password-generator__footer">
-                <div class="password-generator__popup lang-password-generator__numbers">
+                <div
+                  class="password-generator__popup lang-password-generator__numbers"
+                >
                   Выберете кол-во символов
                 </div>
                 <button class="password-generator__btn btn lang-generate-btn">
@@ -110,7 +144,11 @@
                 <span></span>
                 <span></span>
               </button>
-              <h2 class="password-generator__passwords-title lang-your-passwords-title">Ваши Пароли:</h2>
+              <h2
+                class="password-generator__passwords-title lang-your-passwords-title"
+              >
+                Ваши Пароли:
+              </h2>
               <ul class="password-generator__password-items">
                 <li class="password-generator__password-item">
                   <input
@@ -125,7 +163,9 @@
                       alt="copy image"
                     />
                   </div>
-                  <div class="password-generator__copy-popup lang-copied">Cкопировано</div>
+                  <div class="password-generator__copy-popup lang-copied">
+                    Cкопировано
+                  </div>
                 </li>
                 <li class="password-generator__password-item">
                   <input
@@ -140,7 +180,9 @@
                       alt="copy image"
                     />
                   </div>
-                  <div class="password-generator__copy-popup lang-copied">Cкопировано</div>
+                  <div class="password-generator__copy-popup lang-copied">
+                    Cкопировано
+                  </div>
                 </li>
                 <li class="password-generator__password-item">
                   <input
@@ -155,7 +197,9 @@
                       alt="copy image"
                     />
                   </div>
-                  <div class="password-generator__copy-popup lang-copied">Cкопировано</div>
+                  <div class="password-generator__copy-popup lang-copied">
+                    Cкопировано
+                  </div>
                 </li>
                 <li class="password-generator__password-item">
                   <input
@@ -170,7 +214,9 @@
                       alt="copy image"
                     />
                   </div>
-                  <div class="password-generator__copy-popup lang-copied">Cкопировано</div>
+                  <div class="password-generator__copy-popup lang-copied">
+                    Cкопировано
+                  </div>
                 </li>
                 <li class="password-generator__password-item">
                   <input
@@ -185,7 +231,9 @@
                       alt="copy image"
                     />
                   </div>
-                  <div class="password-generator__copy-popup lang-copied">Cкопировано</div>
+                  <div class="password-generator__copy-popup lang-copied">
+                    Cкопировано
+                  </div>
                 </li>
                 <li class="password-generator__password-item">
                   <input
@@ -200,7 +248,9 @@
                       alt="copy image"
                     />
                   </div>
-                  <div class="password-generator__copy-popup lang-copied">Cкопировано</div>
+                  <div class="password-generator__copy-popup lang-copied">
+                    Cкопировано
+                  </div>
                 </li>
                 <li class="password-generator__password-item">
                   <input
@@ -215,7 +265,9 @@
                       alt="copy image"
                     />
                   </div>
-                  <div class="password-generator__copy-popup lang-copied">Cкопировано</div>
+                  <div class="password-generator__copy-popup lang-copied">
+                    Cкопировано
+                  </div>
                 </li>
               </ul>
             </div>
@@ -227,7 +279,5 @@
     <!-- <script src="./js/libs/jquery/jquery.js"></script> -->
     <!-- * js libs -->
     <!-- <script src="./js/libs/vendors/libs.min.js"></script> -->
-    <!--* main script  -->
-    <script src="./js/main.js"></script>
   </body>
 </html>

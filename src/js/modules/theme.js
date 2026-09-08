@@ -1,97 +1,88 @@
-const switchers = document.querySelectorAll(".switcher")
-const darkBtn = document.querySelector("[data-theme]")
-const darkBtns = document.querySelectorAll("[data-theme='dark']")
-const lightBtns = document.querySelectorAll("[data-theme='light']")
-const themePopup = document.querySelector(".theme__popup")
+const themeToggle = document.querySelector('#theme-toggle');
+const themeSwitcher = document.querySelector('.theme-switch');
 
 const themes = {
-  header: {
+  '.body': {
     theme: {
-      light: "header--light",
-      dark: "header--dark",
+      light: 'body--light',
+      dark: 'body--dark',
     },
   },
-  ".works__item": {
-    theme: {
-      light: "works__item--light",
-      dark: "works__item--dark",
-    },
-  },
-  body: {
-    theme: {
-      light: "body--light",
-      dark: "body--dark",
-    },
-  },
-  ".theme__popup": {
-    theme: {
-      light: "theme__popup--light",
-      dark: "theme__popup--dark",
-    },
-  },
-}
-function themeSwitch(theme) {
-  const switcherLight = document.querySelector(".theme__light")
-  const switcherDark = document.querySelector(".theme__dark")
-  for (key in themes) {
-    const elems = document.querySelectorAll(key)
-    elems.forEach((elem) => {
-      if ((elem && themes[key].theme.light) || themes[key].theme.dark) {
-        elem.classList.remove(`${themes[key].theme.dark}`, `${themes[key].theme.light}`)
+};
 
-        if (theme === "light") {
-          elem.classList.add(`${themes[key].theme.light}`)
-          switcherLight.classList.add("hide")
-          switcherDark.classList.remove("hide")
+themeToggle.addEventListener('change', () => {
+  themeSwitcher.classList.add('is-animating');
+
+  setTimeout(() => {
+    themeSwitcher.classList.remove('is-animating');
+  }, 650);
+
+  if (themeToggle.checked) {
+    themeSwitch('light');
+  } else {
+    themeSwitch('dark');
+  }
+
+  // Сохраняем тему
+  localStorage.setItem('theme', themeToggle.checked ? 'light' : 'dark');
+});
+
+function themeSwitch(theme) {
+  for (key in themes) {
+    const elems = document.querySelectorAll(key);
+    elems.forEach(elem => {
+      if ((elem && themes[key].theme.light) || themes[key].theme.dark) {
+        elem.classList.remove(
+          `${themes[key].theme.dark}`,
+          `${themes[key].theme.light}`,
+        );
+
+        if (theme === 'light') {
+          elem.classList.add(`${themes[key].theme.light}`);
         } else {
-          elem.classList.add(`${themes[key].theme.dark}`)
-          switcherDark.classList.add("hide")
-          switcherLight.classList.remove("hide")
+          elem.classList.add(`${themes[key].theme.dark}`);
         }
       }
-    })
+    });
   }
 }
 
-switchers.forEach((switcher) => {
-  switcher.addEventListener("click", function (e) {
-    if (e.target.closest(".switcher").dataset.theme === "light") {
-      themeSwitch("light")
-    } else {
-      themeSwitch("dark")
-    }
-    localStorage.setItem("theme", this.dataset.theme)
-  })
-})
+const activeTheme = localStorage.getItem('theme');
 
-const activeTheme = localStorage.getItem("theme")
+if (activeTheme === 'light') {
+  themeToggle.checked = true;
+} else if (activeTheme === 'dark') {
+  themeToggle.checked = false;
+}
 
-if (activeTheme === null) {
-  themeSwitch("dark")
+if (activeTheme === '') {
+  themeSwitch('light');
 } else {
-  themeSwitch(activeTheme)
+  themeSwitch(activeTheme);
 }
 
-switchers.forEach((switcher) => {
-  function mouseEnter(event) {
-    if (event.target.closest(".switcher").dataset.theme === "light") {
-      themePopup.innerHTML = "switch to light theme"
-    } else {
-      themePopup.innerHTML = "switch to dark theme"
-    }
-    if (document.documentElement.clientWidth > 991) {
-      themePopup.classList.add("show")
-      themePopup.classList.remove("hide")
-    } else {
-      themePopup.classList.add("hide")
-      themePopup.classList.remove("show")
-    }
-  }
-  switcher.addEventListener("mouseenter", mouseEnter)
-})
+// Checking when the system preferences are active
 
-switchers.forEach((switcher) => {
-  switcher.addEventListener("mouseleave", function () {
-    themePopup.classList.remove("show")
-  })
-})
+if (
+  window.matchMedia &&
+  window.matchMedia('(prefers-color-scheme: dark)').matches &&
+  activeTheme === ''
+) {
+  themeSwitch('dark');
+}
+
+// Changing theme when the System preferences change
+
+window
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', event => {
+    const newColorScheme = event.matches ? 'dark' : 'light';
+
+    if (newColorScheme === 'dark') {
+      themeSwitch('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      themeSwitch('light');
+      localStorage.setItem('theme', 'light');
+    }
+  });

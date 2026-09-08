@@ -1,4 +1,3 @@
-// import './modules/theme';
 // import './modules/lang';
 // import './modules/aos';
 import './modules/copyValue';
@@ -8,3 +7,4 @@ import './modules/changeCharacters';
 import './modules/main-script';
 import './modules/closeModal';
 import './modules/lang';
+import './modules/theme';

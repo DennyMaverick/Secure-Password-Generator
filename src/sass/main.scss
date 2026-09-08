@@ -22,6 +22,7 @@
 @use "./block/input";
 @use "./block/password-item";
 @use './block/lang-tool';
+@use './block/theme-switch';
 
 
 // ======== helpers =========
@@ -47,9 +48,19 @@ body {
   min-height: 100vh;
   font-family: Montserrat, sans-serif;
   font-size: 1.5rem;
-  background-color: vars.$background-main;
+  background-color: vars.$black;
   margin: 0;
 }
+
+.body {
+  &--light {
+    background-color: vars.$background-main;
+  }
+  &--dark {
+    background-color: vars.$black;
+  }
+}
+
 
 h1,
 h2,
