@@ -53,6 +53,7 @@ body {
 }
 
 .body {
+  transition: background-color 1s ease-in;
   &--light {
     background-color: vars.$background-main;
   }

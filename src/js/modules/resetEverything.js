@@ -12,9 +12,7 @@ const labelSpecial = document.querySelector('.password-item__label-special');
 
 const resetEverything = function () {
   // Сброс выбора количества символов
-  listItems.forEach(item => {
-    item.classList.remove('password-item__list-item--active');
-  });
+  resetActiveListItem();
 
   // Сброс выбора специальные символы
   defaultCheckboxSpecial.checked = false;
@@ -28,5 +26,16 @@ customCheckboxSpecial.addEventListener('click', function () {
     defaultCheckboxSpecial.checked = true;
   }
 });
+
+function resetActiveListItem() {
+  listItems.forEach(item => {
+    item.classList.remove(
+      'password-item--active',
+      'password-item__list-item--active',
+      'password-item__list-item--active--light',
+      'password-item__list-item--active--dark',
+    );
+  });
+}
 
 resetBtn.addEventListener('click', resetEverything);

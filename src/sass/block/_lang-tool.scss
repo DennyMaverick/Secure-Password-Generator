@@ -7,14 +7,26 @@
   width: 65px;
   height: 25px;
   border-radius: 4px;
-  background-color: vars.$color-indian-red;
+
+  &--light {
+    background-color: vars.$light-color-btn;
+  }
+  &--dark {
+    background-color: vars.$color-indian-red;
+  }
   &__item {
     cursor: pointer;
     &:hover {
       opacity:.8;
     }
     &--active {
-      color: vars.$black;
+
+      &--light {
+        color: vars.$light-text-color;
+      }
+      &--dark {
+        color: vars.$black;
+      }
     }
   }
   &__devider {

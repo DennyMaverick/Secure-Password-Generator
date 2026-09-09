@@ -95,11 +95,19 @@
   width: 21px;
   color: #ffffff;
 
-  background: #df6565;
+
   transform: rotate(-180deg) scale(0.6);
   opacity: 0;
 
-  box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
+
+  &--light {
+    background-color: vars.$light-color-btn;
+    box-shadow: 0 0 10px vars.$light-color-btn;;
+  }
+  &--dark {
+    background-color: #df6565;
+    box-shadow: 0 0 10px rgba(255, 23, 68, 0.6);
+  }
 }
 
 .theme-switch input:checked + .theme-switch__track {
