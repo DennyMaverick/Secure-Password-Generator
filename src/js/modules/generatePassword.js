@@ -4,14 +4,14 @@ const inputs = document.querySelectorAll('.password-generator__pass-item');
 const resetBtn = document.querySelector('.password-generator__reset-btn');
 const passwordPopup = document.querySelector('.password-generator__popup');
 const passwordGeneratorInputs = document.querySelectorAll(
-  '.password-generator__password'
+  '.password-generator__password',
 );
 const passwordDashBoard = document.querySelector(
-  '.password-generator__passwords'
+  '.password-generator__passwords',
 );
 
 const specialCheckboxDefault = document.querySelector(
-  '.password-item__default-checkbox--specials'
+  '.password-item__default-checkbox--specials',
 );
 
 let symbolArray = [

@@ -5,10 +5,12 @@ const resetBtn = document.querySelector('.password-generator__reset-btn');
 const defaultCheckboxSpecial = document.querySelector('#special');
 
 const customCheckboxSpecial = document.querySelector(
-  '.custom-checkbox--specials'
+  '.custom-checkbox--specials',
 );
 
+
 const labelSpecial = document.querySelector('.password-item__label-special');
+
 
 const resetEverything = function () {
   // Сброс выбора количества символов
@@ -16,6 +18,7 @@ const resetEverything = function () {
 
   // Сброс выбора специальные символы
   defaultCheckboxSpecial.checked = false;
+  deactivateBoxShadowForBlockOfPasswords();
 };
 
 // Переключение кастомного чекбокса в поле 'специальные символы'
@@ -39,3 +42,5 @@ function resetActiveListItem() {
 }
 
 resetBtn.addEventListener('click', resetEverything);
+
+

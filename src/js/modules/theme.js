@@ -2,7 +2,7 @@ const themeToggle = document.querySelector('#theme-toggle');
 const themeSwitcher = document.querySelector('.theme-switch');
 const listItems = document.querySelectorAll('.password-item__list-item');
 let activeTheme = localStorage.getItem('theme');
-
+const resetBtn = document.querySelector('.password-generator__reset-btn');
 
 const themes = {
   '.body': {
@@ -137,29 +137,29 @@ if (activeTheme === '') {
 
 // Checking when the system preferences are active
 
-if (
-  window.matchMedia &&
-  window.matchMedia('(prefers-color-scheme: dark)').matches &&
-  activeTheme === ''
-) {
-  themeSwitch('dark');
-}
+// if (
+//   window.matchMedia &&
+//   window.matchMedia('(prefers-color-scheme: dark)').matches &&
+//   activeTheme === ''
+// ) {
+//   themeSwitch('dark');
+// }
 
 // Changing theme when the System preferences change
 
-window
-  .matchMedia('(prefers-color-scheme: dark)')
-  .addEventListener('change', event => {
-    const newColorScheme = event.matches ? 'dark' : 'light';
+// window
+//   .matchMedia('(prefers-color-scheme: dark)')
+//   .addEventListener('change', event => {
+//     const newColorScheme = event.matches ? 'dark' : 'light';
 
-    if (newColorScheme === 'dark') {
-      themeSwitch('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      themeSwitch('light');
-      localStorage.setItem('theme', 'light');
-    }
-  });
+//     if (newColorScheme === 'dark') {
+//       themeSwitch('dark');
+//       localStorage.setItem('theme', 'dark');
+//     } else {
+//       themeSwitch('light');
+//       localStorage.setItem('theme', 'light');
+//     }
+//   });
 
 function resetActiveListItem() {
   listItems.forEach(item => {
