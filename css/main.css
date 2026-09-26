@@ -152,14 +152,10 @@
 }
 
 .password-generator__passwords--light {
-  -webkit-box-shadow: 0 0 10px #04ffa1;
-  box-shadow: 0 0 10px #04ffa1;
   background-color: #5a84e8;
 }
 
 .password-generator__passwords--dark {
-  -webkit-box-shadow: 0 0 10px #b85c73;
-  box-shadow: 0 0 10px #b85c73;
   background-color: #2b2b2b;
 }
 
