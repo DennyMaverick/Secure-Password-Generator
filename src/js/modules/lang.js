@@ -51,8 +51,8 @@ const repeatElems = {
     en: 'Choose the number of characters',
   },
   copied: {
-    ru: 'Cкопировано',
-    en: 'Copied',
+    ru: 'Cкопировано !',
+    en: 'Copied !',
   },
 };
 

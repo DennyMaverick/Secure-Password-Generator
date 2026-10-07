@@ -83,6 +83,12 @@ const themes = {
       dark: 'lang-tool__item--active--dark',
     },
   },
+  '.password-generator__copy-popup': {
+    theme: {
+      light: 'password-generator__copy-popup--light',
+      dark: 'password-generator__copy-popup--dark',
+    },
+  },
 };
 
 themeToggle.addEventListener('change', () => {
