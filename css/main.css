@@ -213,17 +213,25 @@
 .password-generator__copy-popup {
   color: #fff;
   position: absolute;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 10px;
   right: 0;
   top: -20px;
   padding: 5px 10px;
-  background-color: #2aab97;
   border-radius: 2px;
   opacity: 0;
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
+}
+
+.password-generator__copy-popup--light {
+  background-color: #1824dc;
+}
+
+.password-generator__copy-popup--dark {
+  background-color: #b85c73;
 }
 
 .password-generator__copy-popup--active {
