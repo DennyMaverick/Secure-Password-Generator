@@ -4,6 +4,7 @@ const listItems = document.querySelectorAll('.password-item__list-item');
 let activeTheme = localStorage.getItem('theme');
 const resetBtn = document.querySelector('.password-generator__reset-btn');
 
+
 const themes = {
   '.body': {
     theme: {
@@ -110,6 +111,8 @@ themeToggle.addEventListener('change', () => {
   resetActiveListItem();
 });
 function themeSwitch(theme) {
+  localStorage.setItem('theme', theme);
+  updateLocalStorageTheme();
   for (key in themes) {
     const elems = document.querySelectorAll(key);
     elems.forEach(elem => {
@@ -136,7 +139,7 @@ if (activeTheme === 'light') {
 }
 
 if (activeTheme === '') {
-  themeSwitch('light');
+  themeSwitch('dark');
 } else {
   themeSwitch(activeTheme);
 }
