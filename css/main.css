@@ -151,14 +151,6 @@
   transition: .7s ease-in transform,.5s ease-in z-index;
 }
 
-.password-generator__passwords--light {
-  background-color: #5a84e8;
-}
-
-.password-generator__passwords--dark {
-  background-color: #2b2b2b;
-}
-
 .password-generator__passwords--active {
   -webkit-transform: translateX(-250px);
   -ms-transform: translateX(-250px);
@@ -668,8 +660,6 @@
   -ms-transform: rotate(0deg) scale(1);
   transform: rotate(0deg) scale(1);
   opacity: 1;
-  -webkit-box-shadow: 0 0 8px rgba(120,70,255,.45);
-  box-shadow: 0 0 8px rgba(120,70,255,.45);
 }
 
 .theme-switch__icon--sun {
@@ -691,18 +681,6 @@
   -ms-transform: rotate(-180deg) scale(0.6);
   transform: rotate(-180deg) scale(0.6);
   opacity: 0;
-}
-
-.theme-switch__icon--sun--light {
-  background-color: #1824dc;
-  -webkit-box-shadow: 0 0 10px #1824dc;
-  box-shadow: 0 0 10px #1824dc;
-}
-
-.theme-switch__icon--sun--dark {
-  background-color: #df6565;
-  -webkit-box-shadow: 0 0 10px rgba(255,23,68,.6);
-  box-shadow: 0 0 10px rgba(255,23,68,.6);
 }
 
 .theme-switch input:checked+.theme-switch__track {
