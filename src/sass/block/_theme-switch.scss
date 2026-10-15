@@ -36,7 +36,7 @@
 
   border-radius: 50px;
 
-  background: #111;
+  background: #fff;
 
   border: 1px solid #292929;
 
@@ -76,9 +76,8 @@
 
 .theme-switch__icon--moon {
   left: 40.1px;
-  color: #ffffff;
 
-  background: #242424;
+  background: transparent;
   transform: rotate(0deg) scale(1);
   opacity: 1;
 }
@@ -98,7 +97,7 @@
 }
 
 .theme-switch input:checked + .theme-switch__track {
-  background: #eeeeee;
+  background: #fff;
 
   border-color: #d5d5d5;
 
