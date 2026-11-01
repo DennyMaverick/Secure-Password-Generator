@@ -1,6 +1,10 @@
 //* =========== Объект с переводом страницы ==============
 
 const langs = {
+  title: {
+    ru: 'Генератор паролей',
+    en: 'Password Generator',
+  },
   'password-generator__title': {
     ru: 'Генератор паролей',
     en: 'Password Generator',
