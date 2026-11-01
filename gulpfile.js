@@ -16,6 +16,7 @@ const favicon = require('./task/favicon.js');
 // const svgsprite = require('./task/svgsprite.js');
 const libsCssAndScss = require('./task/libsCssScss');
 const jslibs = require('./task/jslibs.js');
+const cname = require('./task/cname.js');
 // const jquerylib = require('./task/jquerylib.js');
 
 // Статический сервер
@@ -36,10 +37,11 @@ const watcher = () => {
   watch(path.img.watch, img).on('all', browserSync.reload);
   watch(path.font.watch, font).on('all', browserSync.reload);
   watch(path.favicon.watch, favicon).on('all', browserSync.reload);
+  watch(path.cname.watch, favicon).on('all', browserSync.reload);
   // watch(path.svgsprite.watch, svgsprite).on('all', browserSync.reload);
   watch(path.libsCssAndScss.watch, libsCssAndScss).on(
     'all',
-    browserSync.reload
+    browserSync.reload,
   );
 };
 
@@ -55,8 +57,9 @@ const build = series(
     libsCssAndScss,
     jslibs,
     // jquerylib,
-    favicon
-  )
+    favicon,
+    cname,
+  ),
 );
 
 const dev = series(build, parallel(server, watcher));
@@ -72,6 +75,7 @@ exports.favicon = favicon;
 // exports.svgsprite = svgsprite;
 exports.libsCssAndScss = libsCssAndScss;
 exports.jslibs = jslibs;
+exports.cname = cname;
 // exports.jquerylib = jquerylib;
 
 // Сборка
