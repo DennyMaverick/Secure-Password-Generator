@@ -1,20 +1,21 @@
-const { src, dest } = require("gulp");
+const {src, dest} = require('gulp');
 
 // Конфигурация
-const path = require("../config/path.js");
-const app = require("../config/app.js");
+const path = require('../config/path.js');
+const app = require('../config/app.js');
 
 // Плагины
 const plumber = require('gulp-plumber');
-const notify = require('gulp-notify');
-const autoprefixer = require("gulp-autoprefixer");
-const csso = require("gulp-csso");
-const rename = require("gulp-rename");
-const size = require("gulp-size");
-const groupMedia = require("gulp-group-css-media-queries");
-const sass = require('gulp-dart-sass');
-// const sassGlob = require('gulp-sass-glob');
-const webpCss = require('gulp-webp-css');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const csso = require('gulp-csso');
+const rename = require('gulp-rename');
+const size = require('gulp-size');
+const mergeLonghand = require('postcss-merge-longhand');
+const sortMediaQueries = require('postcss-sort-media-queries');
+const sass = require('gulp-sass')(require('sass'));
+// const sassGlob = require("gulp-sass-glob");
+// const webpCss = require("gulp-webp-css");
 
 // Обработка SCSS
 const scss = () => {
@@ -22,17 +23,23 @@ const scss = () => {
     src(path.scss.src, {sourcemaps: app.isDev})
       .pipe(
         plumber({
-          errorHandler: notify.onError(error => ({
-            title: 'SCSS',
-            message: error.message,
-          })),
-        })
+          errorHandler: error => {
+            console.error(`[SCSS] ${error.message}`);
+          },
+        }),
       )
       // .pipe(sassGlob())
-      .pipe(sass(app.scss))
-      .pipe(webpCss())
-      .pipe(autoprefixer())
-      .pipe(groupMedia())
+      .pipe(sass())
+      // .pipe(webpCss())
+      .pipe(postcss([autoprefixer()]))
+      .pipe(postcss([mergeLonghand()]))
+      .pipe(
+        postcss([
+          sortMediaQueries({
+            sort: 'mobile-first',
+          }),
+        ]),
+      )
       .pipe(size({title: 'main.css'}))
       .pipe(dest(path.scss.dest, {sourcemaps: app.isDev}))
       .pipe(csso())
