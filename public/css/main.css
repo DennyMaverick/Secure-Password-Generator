@@ -798,6 +798,22 @@
             transform: translateX(250%);
   }
 }
+.winter-snowfall {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1s ease, visibility 1s ease;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+.winter-snowfall--active {
+  opacity: 1;
+  visibility: visible;
+}
 .hide {
   display: none !important;
 }
@@ -1062,5 +1078,8 @@ a:focus {
     -webkit-animation: none;
             animation: none;
     opacity: 1;
+  }
+  .winter-snowfall {
+    display: none;
   }
 }
