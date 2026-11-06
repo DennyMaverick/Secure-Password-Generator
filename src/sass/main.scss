@@ -1,33 +1,29 @@
-@use "sass:math";
+@use 'sass:math';
 
 //* ============== Variables ============
 
-@use "./vars";
+@use './vars';
 
 //* ============== Fonts ================
 
-@use "./fonts";
+@use './fonts';
 
 //* ===== Mixins =====
 
-@use "./mixins";
-
-
-
+@use './mixins';
 
 // ============ Blocks ==============
 
-@use "./block/btn";
-@use "./block/password-generator";
-@use "./block/input";
-@use "./block/password-item";
+@use './block/btn';
+@use './block/password-generator';
+@use './block/input';
+@use './block/password-item';
 @use './block/lang-tool';
 @use './block/theme-switch';
-
+@use './block/preloader-page';
 
 // ======== helpers =========
-@use "./block/helpers";
-
+@use './block/helpers';
 
 //* ============== Reset & base styles =============
 
@@ -61,7 +57,6 @@ body {
     background-color: vars.$black;
   }
 }
-
 
 h1,
 h2,
@@ -129,6 +124,3 @@ a:focus {
   height: 0;
   width: 0;
 }
-
-
-

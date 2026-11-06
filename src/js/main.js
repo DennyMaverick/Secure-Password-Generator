@@ -8,3 +8,4 @@ import './modules/main-script';
 import './modules/closeModal';
 import './modules/lang';
 import './modules/theme';
+import './modules/preloader-page';
