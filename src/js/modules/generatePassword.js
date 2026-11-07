@@ -177,7 +177,7 @@ passwordGeneratorBtn.addEventListener('click', function () {
       passwordPopup.classList.add('password-generator__popup--active');
       setTimeout(() => {
         passwordPopup.classList.remove('password-generator__popup--active');
-      }, 2000);
+      }, 3500);
     }
   }
 });

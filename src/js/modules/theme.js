@@ -90,6 +90,12 @@ const themes = {
       dark: 'password-generator__copy-popup--dark',
     },
   },
+  '.password-generator__popup': {
+    theme: {
+      light: 'password-generator__popup--light',
+      dark: 'password-generator__popup--dark',
+    },
+  },
 };
 
 themeToggle.addEventListener('change', () => {
