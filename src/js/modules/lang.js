@@ -135,7 +135,7 @@ function changeLang() {
     }
   }
 
-  //! перевод всплывающих текстовых подсказок при наводе на ссылки
+  // перевод всплывающих текстовых подсказок при наводе на ссылки
   // for (let key in titles) {
   //   let elem = document.querySelector(".lang-" + key)
   //   if (elem && titles[key][hash]) {
@@ -143,7 +143,7 @@ function changeLang() {
   //   }
   // }
 
-  //! перевод всплывающих текстовых подсказок при наводе на ссылки / повторяющиеся элементы
+  // перевод всплывающих текстовых подсказок при наводе на ссылки / повторяющиеся элементы
   // for (let key in repeatTitles) {
   //   let elems = document.querySelectorAll(".lang-" + key)
   //   elems.forEach(function (elem) {
@@ -152,14 +152,14 @@ function changeLang() {
   //     }
   //   })
   // }
-  //! Для плейсхолдеров
+  // Для плейсхолдеров
   // for (let key in placeholders) {
   //   let elemPlaceholder = document.querySelector(".lang-placeholder-" + key)
   //   if (elemPlaceholder && placeholders[key][hash]) {
   //     elemPlaceholder.placeholder = placeholders[key][hash]
   //   }
   // }
-  //! Для повторяющихся элементов
+  // Для повторяющихся элементов
   for (let key in repeatElems) {
     let elems = document.querySelectorAll('.lang-' + key);
     elems.forEach(function (elem) {
