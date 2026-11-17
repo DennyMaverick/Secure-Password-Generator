@@ -11,6 +11,7 @@ module.exports = {
 
   webpack: {
     mode: isProd ? 'production' : 'development',
+    devtool: false,
   },
 
   imagemin: {
