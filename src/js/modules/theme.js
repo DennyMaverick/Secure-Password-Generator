@@ -96,6 +96,24 @@ const themes = {
       dark: 'password-generator__popup--dark',
     },
   },
+  '.header': {
+    theme: {
+      light: 'header--light',
+      dark: 'header--dark',
+    },
+  },
+  '.footer': {
+    theme: {
+      light: 'footer--light',
+      dark: 'footer--dark',
+    },
+  },
+  '.main__arrow': {
+    theme: {
+      light: 'main__arrow--light',
+      dark: 'main__arrow--dark',
+    },
+  },
 };
 
 themeToggle.addEventListener('change', () => {

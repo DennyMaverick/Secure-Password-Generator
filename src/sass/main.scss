@@ -14,12 +14,16 @@
 
 // ============ Blocks ==============
 
+@use './block/logo';
+@use './block/header';
+@use './block/footer';
 @use './block/btn';
 @use './block/password-generator';
 @use './block/input';
 @use './block/password-item';
 @use './block/lang-tool';
 @use './block/theme-switch';
+@use './block/main';
 @use './block/preloader-page';
 @use './block/winter-snow-fall';
 
@@ -40,6 +44,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;
@@ -74,13 +80,6 @@ a {
   text-decoration: none;
 }
 
-a:active {
-  color: vars.$main-color;
-}
-
-a:visited {
-  color: vars.$main-color;
-}
 
 .container {
   margin: 0 auto;
@@ -88,6 +87,7 @@ a:visited {
   padding-right: 1.5rem;
   max-width: 1170px;
 }
+
 
 ul {
   list-style-type: none;

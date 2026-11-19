@@ -58,6 +58,14 @@ const repeatElems = {
     ru: 'Cкопировано !',
     en: 'Copied !',
   },
+  'privacy-policy-title': {
+    ru: 'Политика конфиденциальности',
+    en: 'Privacy Policy',
+  },
+  'logo-title': {
+    ru: 'Password Generator – Генератор паролей',
+    en: 'Password Generator',
+  },
 };
 
 // ====== Секция Search / placeholders

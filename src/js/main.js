@@ -8,5 +8,7 @@ import './modules/main-script';
 import './modules/closeModal';
 import './modules/lang';
 import './modules/theme';
+import './modules/toDown';
 import './modules/preloader-page';
+import './modules/autoChangeLinks';
 import './modules/winter-snow-fall';

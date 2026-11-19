@@ -13,7 +13,7 @@ const js = require('./task/js.js');
 const img = require('./task/img.js');
 const font = require('./task/font.js');
 const favicon = require('./task/favicon.js');
-// const svgsprite = require('./task/svgsprite.js');
+const svgsprite = require('./task/svgsprite.js');
 const libsCssAndScss = require('./task/libsCssScss');
 const jslibs = require('./task/jslibs.js');
 const cname = require('./task/cname.js');
@@ -38,7 +38,7 @@ const watcher = () => {
   watch(path.font.watch, font).on('all', browserSync.reload);
   watch(path.favicon.watch, favicon).on('all', browserSync.reload);
   watch(path.cname.watch, favicon).on('all', browserSync.reload);
-  // watch(path.svgsprite.watch, svgsprite).on('all', browserSync.reload);
+  watch(path.svgsprite.watch, svgsprite).on('all', browserSync.reload);
   watch(path.libsCssAndScss.watch, libsCssAndScss).on(
     'all',
     browserSync.reload,
@@ -53,7 +53,7 @@ const build = series(
     js,
     font,
     img,
-    // svgsprite,
+    svgsprite,
     libsCssAndScss,
     jslibs,
     // jquerylib,
@@ -72,7 +72,7 @@ exports.js = js;
 exports.img = img;
 exports.font = font;
 exports.favicon = favicon;
-// exports.svgsprite = svgsprite;
+exports.svgsprite = svgsprite;
 exports.libsCssAndScss = libsCssAndScss;
 exports.jslibs = jslibs;
 exports.cname = cname;

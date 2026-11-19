@@ -1,0 +1,35 @@
+@use '../mixins';
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 2px 2px 15px #fff;
+  z-index: 10010;
+  &--light {
+    background-color: purple;
+    background-image: linear-gradient(to right bottom, #7d5f5f, darkblue);
+  }
+  &--dark {
+    background-color: #2b2b2b;
+  }
+  &__logo-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  @include mixins.bp-desk(mobile) {
+      display: none;
+    }
+}
+
+.header-container {
+  max-width: 1199px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+

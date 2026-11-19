@@ -22,11 +22,24 @@ $breakpoints: (
   }
 }
 
+// @mixin media-down-height($height) {
+//   @media (max-height: $height) {
+//     @content;
+//   }
+// }
+
 // Desktop-first
 
 @mixin bp-desk($name) {
   $width: map.get($breakpoints, $name);
   @include media-down($width) {
+    @content;
+  }
+}
+
+// Медиа-выражение mobile-first
+@mixin media-up($height) {
+  @media (min-height: $height) {
     @content;
   }
 }
