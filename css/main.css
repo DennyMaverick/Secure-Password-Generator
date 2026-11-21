@@ -45,7 +45,7 @@
   padding-bottom: 20px;
   -webkit-box-shadow: 2px 2px 15px #fff;
           box-shadow: 2px 2px 15px #fff;
-  z-index: 10010;
+  z-index: 9997;
 }
 .header--light {
   background-color: purple;
@@ -832,7 +832,7 @@
   position: fixed;
   right: max((100vw - 1170px) / 2, 30px);
   bottom: 120px;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .preloader-page {
@@ -1209,7 +1209,7 @@ a:focus {
     height: 100%;
   }
   .password-generator__passwords-title {
-    margin-top: 75px;
+    margin-top: 25px;
   }
   .password-generator__title {
     font-size: 2rem;
