@@ -1145,7 +1145,7 @@ a:focus {
     background-color: #5a84e8;
   }
   .password-generator__passwords--dark {
-    background-color: #000410;
+    background-color: #2b2b2b;
   }
   .password-generator__passwords--active {
     -webkit-transform: translateX(0);
@@ -1301,9 +1301,6 @@ a:focus {
   }
   .body--light {
     background-color: #5a84e8;
-  }
-  .body--dark {
-    background-color: #000410;
   }
 }
 
