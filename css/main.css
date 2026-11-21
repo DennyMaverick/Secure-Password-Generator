@@ -1302,6 +1302,9 @@ a:focus {
   .body--light {
     background-color: #5a84e8;
   }
+  .body--dark {
+    background-color: #000410;
+  }
 }
 
 @media (max-width: 400px) {
